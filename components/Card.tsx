@@ -1,7 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import colors from '../utils/colors'
+import {Colors} from '../styles'
 import AppText from './AppText'
+import { Typography} from '../styles'
 
  interface CardProps {
     cardName: string;
@@ -15,24 +16,19 @@ const Card: React.FC<CardProps>=({ cardName, cardStyle, cardNameStyle, count, co
     return (
         <View style={[styles.smallCard, cardStyle]}>
             <AppText style={[styles.counter, counterStyle]}>{count}</AppText>
-            <AppText style={[styles.cardName, cardNameStyle]}>{cardName}</AppText>
+            <AppText style={[Typography.SMALL_BOLD_TEXT, cardNameStyle]}>{cardName}</AppText>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    cardName: {
-        fontSize: 14,
-        fontFamily: "bold"
-    },
     counter: {
-        color: colors.primary,
-        fontFamily: "bold",
-        fontSize: 25,
+        ...Typography.LARGE_BOLD_TEXT,
+        color: Colors.primary,
         marginVertical: 0
     },
     smallCard: {
-        backgroundColor: colors.white,
+        backgroundColor: Colors.white,
         width: "43%",
         height: 80,
         padding: 5,

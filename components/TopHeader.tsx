@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 
-import {FULL_WIDTH_SIZE} from '../utils/dimensions';
+import {Dimensions} from '../styles';
 import SearchIcon from 'react-native-vector-icons/FontAwesome';
 import FilterIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   header: {
     position: 'absolute',
     top: 20,
-    width: FULL_WIDTH_SIZE,
+    width: Dimensions.FULL_WIDTH_SIZE,
     justifyContent: 'space-between',
     flexDirection: 'row',
   },

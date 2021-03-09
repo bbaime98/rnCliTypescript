@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import colors from '../utils/colors';
+import {Colors} from '../styles';
 import AddIcon from 'react-native-vector-icons/Feather';
 
 export interface OnPressProp {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         borderRadius: 30,
-        backgroundColor: colors.dark,
+        backgroundColor: Colors.dark,
         justifyContent: "center",
         alignItems: "center"
     }

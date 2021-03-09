@@ -1,6 +1,6 @@
 import React from "react"
 import {Text, StyleSheet} from "react-native"
-import colors from "../utils/colors"
+import {Colors} from "../styles"
 
 export interface AppTextProps {
     style: {};
@@ -18,7 +18,7 @@ export default AppText
 const styles = StyleSheet.create({
     text: {
         fontSize: 18,
-        color: colors.black,
+        color: Colors.black,
         fontFamily: 'semiBold',
         marginVertical: 10,
     }

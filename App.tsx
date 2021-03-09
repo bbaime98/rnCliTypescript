@@ -15,9 +15,9 @@ import {
   Alert
 } from 'react-native';
 
-import colors from './utils/colors';
+import {Colors} from './styles';
 import TopHeader from './components/TopHeader';
-import {FULL_HEIGHT_SIZE} from './utils/dimensions';
+import {Dimensions} from './styles';
 import NoTasksAvailable from './components/NoTasksAvailable';
 import AddButton from './components/AddButton';
 
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   addBtnContainer: {
     position: 'absolute',
     alignSelf: 'flex-end',
-    bottom: FULL_HEIGHT_SIZE / 20,
+    bottom: Dimensions.FULL_HEIGHT_SIZE / 20,
     right: 20,
   },
   container: {
@@ -52,25 +52,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   blackSection: {
-    backgroundColor: colors.black,
+    backgroundColor: Colors.black,
     position: 'absolute',
     height: '33%',
     width: '100%',
     top: 0,
   },
   whiteSection: {
-    backgroundColor: colors.medium,
+    backgroundColor: Colors.medium,
     position: 'absolute',
     height: '68%',
     width: '100%',
     bottom: 0,
   },
   whiteCard: {
-    backgroundColor: colors.white,
+    backgroundColor: Colors.white,
     marginTop: 60,
     top: 20,
     width: '85%',
-    height: FULL_HEIGHT_SIZE - 80,
+    height: Dimensions.FULL_HEIGHT_SIZE - 80,
     borderRadius: 5,
     padding: 20,
     shadowColor: '#000',

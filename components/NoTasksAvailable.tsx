@@ -3,18 +3,18 @@ import {View, StyleSheet, Alert} from "react-native"
 import AppButton from "./AppButton"
 import AppText from "./AppText"
 import Card from "./Card" 
-import colors from '../utils/colors'
+import {Colors, Typography} from '../styles/'
 
 const NoTasksAvailable = () => {
   return (
     <>
       <View style={styles.smallCardsContainer}>
-        <Card cardNameStyle={styles.cardName} count={0} cardName="Total Tasks" />
-        <Card cardNameStyle={styles.cardName} count={0} cardName="Active Tasks" />
+        <Card count={0} cardName="Total Tasks" />
+        <Card count={0} cardName="Active Tasks" />
       </View>
       <View style={styles.smallCardsContainer}>
-        <Card cardNameStyle={styles.cardName} count={0} cardName="Tasks Done" />
-        <Card cardNameStyle={styles.cardName} count={0} cardName="Active High Priority" />
+        <Card count={0} cardName="Tasks Done" />
+        <Card count={0} cardName="Active High Priority" />
       </View>
 
       <View
@@ -28,7 +28,8 @@ const NoTasksAvailable = () => {
         <AppText style={styles.subText}>Just like your crush's replies</AppText>
         <View>
           <AppButton
-            style={{fontSize: 12, fontFamily: "bold"}}
+            // style={{fontSize: 12, fontFamily: "bold"}}
+            style={Typography.SMALL_BOLD_TEXT}
             title="start with a new task"
             width="80%"
             onPress={() => Alert.alert("Yoo..., new task screen is not implemeted yet")}
@@ -40,15 +41,10 @@ const NoTasksAvailable = () => {
 }
 
 const styles = StyleSheet.create({
-  cardName: {
-    fontSize: 11,
-    fontFamily: "bold"
-},
   nothing: {
-    fontFamily: "bold",
-    color: colors.dark,
+    ...Typography.MEDIUM_BOLD_TEXT,
+    color: Colors.dark,
     textTransform: "uppercase",
-    fontSize: 15,
   },
   smallCardsContainer: {
     flexDirection: "row",
@@ -56,7 +52,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   subText: {
-    color: colors.secondary,
+    ...Typography.MEDIUM_REGULAR_TEXT,
+    color: Colors.secondary,
     fontSize: 14,
     marginVertical: 0,
   },
