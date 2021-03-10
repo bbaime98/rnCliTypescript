@@ -3,7 +3,7 @@ import {View, StyleSheet, Alert} from "react-native"
 import AppButton from "./AppButton"
 import AppText from "./AppText"
 import Card from "./Card" 
-import {Colors, Typography} from '../styles/'
+import {Align, Colors, Typography} from '../styles/'
 
 const NoTasksAvailable = () => {
   return (
@@ -19,8 +19,7 @@ const NoTasksAvailable = () => {
 
       <View
         style={{
-          alignItems: "center",
-          justifyContent: "center",
+          ...Align.CENTER,
           marginTop: 60,
         }}
       >
@@ -28,7 +27,6 @@ const NoTasksAvailable = () => {
         <AppText style={styles.subText}>Just like your crush's replies</AppText>
         <View>
           <AppButton
-            // style={{fontSize: 12, fontFamily: "bold"}}
             style={Typography.SMALL_BOLD_TEXT}
             title="start with a new task"
             width="80%"

@@ -15,7 +15,7 @@ import {
   Alert
 } from 'react-native';
 
-import {Colors} from './styles';
+import {Align, Colors} from './styles';
 import TopHeader from './components/TopHeader';
 import {Dimensions} from './styles';
 import NoTasksAvailable from './components/NoTasksAvailable';
@@ -48,8 +48,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    ...Align.CENTER
   },
   blackSection: {
     backgroundColor: Colors.black,
